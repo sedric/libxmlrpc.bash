@@ -10,7 +10,7 @@ make some improvements.
 gen_xml : generate XML.
     -m : Method name
     -p : Parameters
-    -d : Delimiter used for parameters. $IFS by default.
+    -d : Delimiter used for parameters. ',' by default.
     ex: gen_xmlrpc  -m method -p 'parameter1:parameter2:...:parameterN'  -d':'
 
 gen_xmlrpc : execute the request
