@@ -1,0 +1,19 @@
+libxmlrpc.bash is a script that contain some functions to execute some XMLRPC
+requests with bash.
+
+The only external binary required is xml2 (http://ofb.net/~egnor/xml2/) for
+grep frendly responses. Except this, libxmlrpc.bash only use Bash builtins.
+
+It is actualy very simple and do not respond to all needs. But I'll occasionaly
+make some improvements.
+
+gen_xml : generate XML.
+    -m : Method name
+    -p : Parameters
+    -d : Delimiter used for parameters. $IFS by default.
+    ex: gen_xmlrpc  -m method -p 'parameter1:parameter2:...:parameterN'  -d':'
+
+gen_xmlrpc : execute the request
+    first argument : the XML
+    second argument : URL
+    ex: gen_xmlrpc "$XML" url.to/some/xmlrpcservice
